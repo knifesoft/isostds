@@ -2,9 +2,20 @@ import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
+
 export default defineUserConfig({
   title: "标准学习笔记",
   description: "notes for stds learning",
+  head: [
+    [// google adsense
+      "script",
+      {
+        "data-ad-client": "ca-pub-3573055271441666",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
+    ]
+  ],
   theme: recoTheme({
     lang: "zh-CN",
     style: "@vuepress-reco/style-default",
