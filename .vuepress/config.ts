@@ -20,7 +20,7 @@ export default defineUserConfig({
     lang: "zh-CN",
     style: "@vuepress-reco/style-default",
     logo: "",
-    author: "七分饱",
+    author: "学习者",
     authorAvatar: "",
     docsRepo: "",
     docsBranch: "main",
