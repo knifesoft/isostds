@@ -33,7 +33,7 @@ export default defineUserConfig({
       "/docs/energy": [
         {
           text: "能源管理体系",
-          children: ["50001", "50003", "50004"],
+          children: ["50001", "50003", "50004","50005"],
           collapsible: false// 默认展开，true 为折叠
         },
 
@@ -47,6 +47,7 @@ export default defineUserConfig({
           { text: "50001", icon:"ISO", link: "/docs/energy/50001" },
           { text: "50003", icon:"ISO", link: "/docs/energy/50003" },
           { text: "50004", icon:"ISO", link: "/docs/energy/50004" },
+          { text: "50005", icon:"ISO", link: "/docs/energy/50005" },
         ],
       },
       {text: "碳", icon: "Energy",link: "/docs/carbon/ca-39-2022" },
