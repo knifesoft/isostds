@@ -1,7 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
-
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 export default defineUserConfig({
   title: "标准学习笔记",
@@ -14,8 +14,15 @@ export default defineUserConfig({
         async: true,
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       }
-    ]
+    ],
   ],
+  plugins: [
+    mdEnhancePlugin({
+      // 使用 KaTeX 启用 TeX 支持
+      katex: true,
+    }),
+  ],
+  
   theme: recoTheme({
     lang: "zh-CN",
     style: "@vuepress-reco/style-default",
@@ -83,6 +90,7 @@ export default defineUserConfig({
       ], },
   
     ],
+    
     // bulletin: {
     //   body: [
     //     {
