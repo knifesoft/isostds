@@ -38,19 +38,49 @@ export default defineUserConfig({
         },
 
       ],
+      "/docs/carbon": [
+        {
+          text: "碳管理体系",
+          children: ["ca-39-2022"],
+          collapsible: false// 默认展开，true 为折叠
+        },
+        {
+          text: "碳排放相关法规",
+          children: ["method-of-trade"],
+          collapsible: false// 默认展开，true 为折叠
+        },
+
+      ],
     },
     navbar: [
       { text: "首页", link: "/" },
       {
         text: "能源", icon: "Energy",
         children: [
-          { text: "50001", icon:"ISO", link: "/docs/energy/50001" },
-          { text: "50003", icon:"ISO", link: "/docs/energy/50003" },
-          { text: "50004", icon:"ISO", link: "/docs/energy/50004" },
-          { text: "50005", icon:"ISO", link: "/docs/energy/50005" },
+          { text: "---标准---", 
+            children: [
+              { text: "50001", icon:"ISO", link: "/docs/energy/50001" },
+              { text: "50003", icon:"ISO", link: "/docs/energy/50003" },
+              { text: "50004", icon:"ISO", link: "/docs/energy/50004" },
+              { text: "50005", icon:"ISO", link: "/docs/energy/50005" },
+            ],
+        },
+          
         ],
       },
-      {text: "碳", icon: "Energy",link: "/docs/carbon/ca-39-2022" },
+      {text: "碳", 
+      children: [
+        {text: "---标准---", 
+          children:[
+            {text: "ccaa-39", link: "/docs/carbon/ca-39-2022"},
+          ],
+        },
+        {text: "---法规---", 
+          children:[
+            {text: "交易办法", link: "/docs/carbon/method-of-trade"},
+          ],
+        },
+      ], },
   
     ],
     // bulletin: {
