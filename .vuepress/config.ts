@@ -53,7 +53,7 @@ export default defineUserConfig({
         },
         {
           text: "碳排放相关法规",
-          children: ["method-of-trade"],
+          children: ["method-of-trade","CH4-emission-control-program"],
           collapsible: false// 默认展开，true 为折叠
         },
         {
@@ -82,17 +82,18 @@ export default defineUserConfig({
       },
       {text: "碳", 
       children: [
-        {text: "-------标准-------", 
+        {text: "---------标准---------", 
           children:[
-            {text: "ccaa-39", link: "/docs/carbon/ca-39-2022"},
+            {text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022"},
           ],
         },
-        {text: "-------法规-------", 
+        {text: "---------法规---------", 
           children:[
-            {text: "交易办法", link: "/docs/carbon/method-of-trade"},
+            {text: "自愿减排交易管理办法", link: "/docs/carbon/method-of-trade"},
+            {text: "甲烷排放控制行动方案", link: "/docs/carbon/CH4-emission-control-program"},
           ],
         },
-        {text: "---CCER方法学---", 
+        {text: "-----CCER方法学-----", 
           children:[
             {text: "并网光热发电", link: "/docs/carbon/CCER-01-001"},
             {text: "并网海上风力发电", link: "/docs/carbon/CCER-01-002"},
