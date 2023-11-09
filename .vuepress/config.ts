@@ -58,8 +58,8 @@ export default defineUserConfig({
         },
         {
           text: "CCER方法学",
-          children: ["CCER-01-001"],
-          collapsible: false// 默认展开，true 为折叠
+          children: ["CCER-01-001","CCER-01-002"],
+          collapsible: true// 默认展开，true 为折叠
         },
 
       ],
@@ -82,19 +82,20 @@ export default defineUserConfig({
       },
       {text: "碳", 
       children: [
-        {text: "----标准----", 
+        {text: "-------标准-------", 
           children:[
             {text: "ccaa-39", link: "/docs/carbon/ca-39-2022"},
           ],
         },
-        {text: "----法规----", 
+        {text: "-------法规-------", 
           children:[
             {text: "交易办法", link: "/docs/carbon/method-of-trade"},
           ],
         },
-        {text: "CCER方法学", 
+        {text: "---CCER方法学---", 
           children:[
             {text: "并网光热发电", link: "/docs/carbon/CCER-01-001"},
+            {text: "并网海上风力发电", link: "/docs/carbon/CCER-01-002"},
           ],
         },
       ], },
