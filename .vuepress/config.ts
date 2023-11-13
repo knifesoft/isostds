@@ -65,22 +65,22 @@ export default defineUserConfig({
       ],
     },
     navbar: [
-      { text: "首页", link: "/" },
+      { text: "首页", link: "/", icon: "Home"},
       {
-        text: "能源", icon: "Energy",
+        text: "能源", icon: "Flash",
         children: [
           { text: "---标准---", 
             children: [
-              { text: "50001", icon:"ISO", link: "/docs/energy/50001" },
-              { text: "50003", icon:"ISO", link: "/docs/energy/50003" },
-              { text: "50004", icon:"ISO", link: "/docs/energy/50004" },
-              { text: "50005", icon:"ISO", link: "/docs/energy/50005" },
+              { text: "50001", icon:"Iso", link: "/docs/energy/50001" },
+              { text: "50003", icon:"Iso", link: "/docs/energy/50003" },
+              { text: "50004", icon:"Iso", link: "/docs/energy/50004" },
+              { text: "50005", icon:"Iso", link: "/docs/energy/50005" },
             ],
         },
           
         ],
       },
-      {text: "碳", 
+      {text: "碳", icon: "CarbonAccounting",
       children: [
         {text: "---------标准---------", 
           children:[
