@@ -22,7 +22,7 @@ export default defineUserConfig({
       katex: true,
     }),
   ],
-  
+
   theme: recoTheme({
     lang: "zh-CN",
     style: "@vuepress-reco/style-default",
@@ -39,8 +39,13 @@ export default defineUserConfig({
     series: {
       "/docs/energy": [
         {
-          text: "能源管理体系",
-          children: ["50001", "50003", "50004","50005"],
+          text: "能源管理体系标准",
+          children: ["50001", "50003", "50004", "50005"],
+          collapsible: false// 默认展开，true 为折叠
+        },
+        {
+          text: "能源管理法规",
+          children: ["energy-management-system-certification-rules"],
           collapsible: false// 默认展开，true 为折叠
         },
 
@@ -53,56 +58,68 @@ export default defineUserConfig({
         },
         {
           text: "碳排放相关法规",
-          children: ["method-of-trade","CH4-emission-control-program"],
+          children: ["method-of-trade", "CH4-emission-control-program"],
           collapsible: false// 默认展开，true 为折叠
         },
         {
           text: "CCER方法学",
-          children: ["CCER-01-001","CCER-01-002"],
+          children: ["CCER-01-001", "CCER-01-002"],
           collapsible: true// 默认展开，true 为折叠
         },
 
       ],
     },
     navbar: [
-      { text: "首页", link: "/", icon: "Home"},
+      { text: "首页", link: "/", icon: "Home" },
       {
         text: "能源", icon: "Flash",
         children: [
-          { text: "---标准---", 
+          {
+            text: "---------标准---------",
             children: [
-              { text: "50001", icon:"Iso", link: "/docs/energy/50001" },
-              { text: "50003", icon:"Iso", link: "/docs/energy/50003" },
-              { text: "50004", icon:"Iso", link: "/docs/energy/50004" },
-              { text: "50005", icon:"Iso", link: "/docs/energy/50005" },
+              { text: "50001", icon: "Iso", link: "/docs/energy/50001" },
+              { text: "50003", icon: "Iso", link: "/docs/energy/50003" },
+              { text: "50004", icon: "Iso", link: "/docs/energy/50004" },
+              { text: "50005", icon: "Iso", link: "/docs/energy/50005" },
             ],
-        },
-          
+          },
+          {
+            text: "---------法规---------",
+            children: [
+              { text: "能源管理体系认证规则", link: "/docs/energy/energy-management-system-certification-rules" },
+            ],
+          },
+
         ],
       },
-      {text: "碳", icon: "CarbonAccounting",
-      children: [
-        {text: "---------标准---------", 
-          children:[
-            {text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022"},
-          ],
-        },
-        {text: "---------法规---------", 
-          children:[
-            {text: "自愿减排交易管理办法", link: "/docs/carbon/method-of-trade"},
-            {text: "甲烷排放控制行动方案", link: "/docs/carbon/CH4-emission-control-program"},
-          ],
-        },
-        {text: "-----CCER方法学-----", 
-          children:[
-            {text: "并网光热发电", link: "/docs/carbon/CCER-01-001"},
-            {text: "并网海上风力发电", link: "/docs/carbon/CCER-01-002"},
-          ],
-        },
-      ], },
-  
+      {
+        text: "碳", icon: "CarbonAccounting",
+        children: [
+          {
+            text: "---------标准---------",
+            children: [
+              { text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022" },
+            ],
+          },
+          {
+            text: "---------法规---------",
+            children: [
+              { text: "自愿减排交易管理办法", link: "/docs/carbon/method-of-trade" },
+              { text: "甲烷排放控制行动方案", link: "/docs/carbon/CH4-emission-control-program" },
+            ],
+          },
+          {
+            text: "-----CCER方法学-----",
+            children: [
+              { text: "并网光热发电", link: "/docs/carbon/CCER-01-001" },
+              { text: "并网海上风力发电", link: "/docs/carbon/CCER-01-002" },
+            ],
+          },
+        ],
+      },
+
     ],
-    
+
     // bulletin: {
     //   body: [
     //     {
