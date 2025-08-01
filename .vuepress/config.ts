@@ -45,7 +45,7 @@ export default defineUserConfig({
         },
         {
           text: "能源管理法规",
-          children: ["energy-management-system-certification-rules"],
+          children: ["energy-management-system-certification-rules","Fixed-Asset-Investment-Projects"],
           collapsible: false// 默认展开，true 为折叠
         },
 
@@ -87,6 +87,7 @@ export default defineUserConfig({
             text: "---------法规---------",
             children: [
               { text: "能源管理体系认证规则", link: "/docs/energy/energy-management-system-certification-rules" },
+              { text: "固定资产投资项目节能审查和碳排放评价办法", link: "/docs/energy/Fixed-Asset-Investment-Projects" },
             ],
           },
 
