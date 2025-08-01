@@ -75,7 +75,7 @@ export default defineUserConfig({
         text: "能源", icon: "Flash",
         children: [
           {
-            text: "---------标准---------",
+            text: "------------------相关标准------------------",
             children: [
               { text: "50001", icon: "Iso", link: "/docs/energy/50001" },
               { text: "50003", icon: "Iso", link: "/docs/energy/50003" },
@@ -84,7 +84,7 @@ export default defineUserConfig({
             ],
           },
           {
-            text: "---------法规---------",
+            text: "------------------法律法规------------------",
             children: [
               { text: "能源管理体系认证规则", link: "/docs/energy/energy-management-system-certification-rules" },
               { text: "固定资产投资项目节能审查和碳排放评价办法", link: "/docs/energy/Fixed-Asset-Investment-Projects" },
