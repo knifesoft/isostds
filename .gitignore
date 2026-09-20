@@ -1,4 +1,5 @@
 .idea/
+dist/
 
 .vuepress/.cache
 .vuepress/.temp
