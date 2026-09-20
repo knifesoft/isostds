@@ -1,6 +1,6 @@
 ---
 title: 固定资产投资项目节能审查和碳排放评价办法
-icon: frame
+icon: IconFrame
 order: 2
 category:
   - 法律法规

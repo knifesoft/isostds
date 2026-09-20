@@ -1,7 +1,7 @@
 ---
 title: 碳管理体系
 index: false
-icon: hot
+icon: IconHot
 category:
   - 标准内容
 

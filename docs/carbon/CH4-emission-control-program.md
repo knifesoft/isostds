@@ -1,6 +1,6 @@
 ---
 title: 甲烷排放控制行动方案
-icon: hot
+icon: IconHot
 order: 2
 category:
   - 法律法规

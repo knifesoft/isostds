@@ -1,6 +1,6 @@
 ---
 title: 温室气体自愿减排交易管理办法（试行）
-icon: hot
+icon: IconHot
 order: 1
 category:
   - 法律法规

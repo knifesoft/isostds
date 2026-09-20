@@ -38,7 +38,6 @@ export default defineUserConfig({
     authorAvatar: "",
     docsRepo: "",
     docsBranch: "main",
-    docsDir: "example",
     lastUpdatedText: "",
     primaryColor: '#12aa9c',//主色配置
     catalogTitle: '本页目录', //自定义目录标题
@@ -94,17 +93,17 @@ export default defineUserConfig({
       ],
     },
     navbar: [
-      { text: "首页", link: "/", icon: "Home" },
+      { text: "首页", link: "/", icon: "IconHome" },
       {
-        text: "能源", icon: "Flash",
+        text: "能源", icon: "IconFlash",
         children: [
           {
             text: "------------------相关标准------------------",
             children: [
-              { text: "50001", icon: "Iso", link: "/docs/energy/50001" },
-              { text: "50003", icon: "Iso", link: "/docs/energy/50003" },
-              { text: "50004", icon: "Iso", link: "/docs/energy/50004" },
-              { text: "50005", icon: "Iso", link: "/docs/energy/50005" },
+              { text: "50001", icon: "IconIso", link: "/docs/energy/50001" },
+              { text: "50003", icon: "IconIso", link: "/docs/energy/50003" },
+              { text: "50004", icon: "IconIso", link: "/docs/energy/50004" },
+              { text: "50005", icon: "IconIso", link: "/docs/energy/50005" },
             ],
           },
           {
@@ -118,7 +117,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: "碳", icon: "CarbonAccounting",
+        text: "碳", icon: "IconCarbonAccounting",
         children: [
           {
             text: "---------标准---------",

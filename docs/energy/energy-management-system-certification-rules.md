@@ -1,6 +1,6 @@
 ---
 title: 能源管理体系认证规则
-icon: frame
+icon: IconFrame
 order: 1
 category:
   - 法律法规
