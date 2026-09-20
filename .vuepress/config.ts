@@ -1,9 +1,18 @@
 import { defineUserConfig } from "vuepress";
-import type { DefaultThemeOptions } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import recoTheme from "vuepress-theme-reco";
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { markdownMathPlugin } from "@vuepress/plugin-markdown-math";
+
+// rc.26 运行时支持 collapsible（SeriesItem 用它控制折叠），但类型声明缺失，这里补充
+declare module "vuepress-theme-reco/lib/types/nav" {
+  interface SeriesGroup {
+    collapsible?: boolean;
+  }
+}
 
 export default defineUserConfig({
+  bundler: viteBundler(),
+  lang: "zh-CN",
   title: "标准学习笔记",
   description: "notes for stds learning",
   head: [
@@ -17,15 +26,13 @@ export default defineUserConfig({
     ],
   ],
   plugins: [
-    mdEnhancePlugin({
-      // 使用 KaTeX 启用 TeX 支持
-      katex: true,
+    markdownMathPlugin({
+      // 使用 KaTeX 启用 TeX 支持（rc 版通过 type 指定渲染引擎）
+      type: "katex",
     }),
   ],
 
   theme: recoTheme({
-    lang: "zh-CN",
-    style: "@vuepress-reco/style-default",
     logo: "",
     author: "学习者",
     authorAvatar: "",
@@ -40,12 +47,20 @@ export default defineUserConfig({
       "/docs/energy": [
         {
           text: "能源管理体系标准",
-          children: ["50001", "50003", "50004", "50005"],
-          collapsible: false// 默认展开，true 为折叠
+          children: [
+            { text: "50001", link: "/docs/energy/50001" },
+            { text: "50003", link: "/docs/energy/50003" },
+            { text: "50004", link: "/docs/energy/50004" },
+            { text: "50005", link: "/docs/energy/50005" },
+          ],
+          collapsible: false,// 默认展开，true 为折叠
         },
         {
           text: "能源管理法规",
-          children: ["energy-management-system-certification-rules","Fixed-Asset-Investment-Projects"],
+          children: [
+            { text: "能源管理体系认证规则", link: "/docs/energy/energy-management-system-certification-rules" },
+            { text: "固定资产投资项目节能审查和碳排放评价办法", link: "/docs/energy/Fixed-Asset-Investment-Projects" },
+          ],
           collapsible: false// 默认展开，true 为折叠
         },
 
@@ -53,17 +68,25 @@ export default defineUserConfig({
       "/docs/carbon": [
         {
           text: "碳管理体系",
-          children: ["ca-39-2022"],
+          children: [
+            { text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022" },
+          ],
           collapsible: false// 默认展开，true 为折叠
         },
         {
           text: "碳排放相关法规",
-          children: ["method-of-trade", "CH4-emission-control-program"],
+          children: [
+            { text: "温室气体自愿减排交易管理办法（试行）", link: "/docs/carbon/method-of-trade" },
+            { text: "甲烷排放控制行动方案", link: "/docs/carbon/CH4-emission-control-program" },
+          ],
           collapsible: false// 默认展开，true 为折叠
         },
         {
           text: "CCER方法学",
-          children: ["CCER-01-001", "CCER-01-002"],
+          children: [
+            { text: "并网光热发电", link: "/docs/carbon/CCER-01-001" },
+            { text: "并网海上风力发电", link: "/docs/carbon/CCER-01-002" },
+          ],
           collapsible: true// 默认展开，true 为折叠
         },
 

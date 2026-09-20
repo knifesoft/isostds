@@ -11,13 +11,14 @@
     "build": "vuepress build ."
   },
   "dependencies": {
-    "vuepress": "2.0.0-beta.67",
+    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "vuepress": "2.0.0-rc.19",
     "vuepress-plugin-google-adsense2": "^1.0.2",
-    "vuepress-theme-reco": "2.0.0-beta.68"
+    "vuepress-theme-reco": "2.0.0-rc.26"
   },
   "devDependencies": {
-    "katex": "^0.16.9",
-    "vuepress-plugin-md-enhance": "^2.0.0-beta.245"
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.109",
+    "katex": "^0.16.10"
   },
   "packageManager": "yarn@3.8.7+sha512.bbe7e310ff7fd20dc63b111110f96fe18192234bb0d4f10441fa6b85d2b644c8923db8fbe6d7886257ace948440ab1f83325ad02af457a1806cdc97f03d2508e"
 }
