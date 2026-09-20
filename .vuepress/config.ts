@@ -70,6 +70,7 @@ export default defineUserConfig({
           text: "碳管理体系",
           children: [
             { text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022" },
+            { text: "温室气体管理体系 要求", link: "/docs/carbon/GB-T-46566-2025"}
           ],
           collapsible: false// 默认展开，true 为折叠
         },
@@ -123,6 +124,7 @@ export default defineUserConfig({
             text: "---------标准---------",
             children: [
               { text: "碳管理体系 要求", link: "/docs/carbon/ca-39-2022" },
+              { text: "温室气体管理体系 要求", link: "/docs/carbon/GB-T-46566-2025"},
             ],
           },
           {
