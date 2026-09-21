@@ -95,6 +95,17 @@ export default defineUserConfig({
     navbar: [
       { text: "首页", link: "/", icon: "IconHome" },
       {
+        text: "质量", icon: "IconQuality",
+        children: [
+          {
+            text: "------------------相关标准------------------",
+            children: [
+              { text: "9001", icon: "IconIso", link: "/docs/quality/9001" },
+            ],
+          },
+        ],
+      },
+      {
         text: "能源", icon: "IconFlash",
         children: [
           {
